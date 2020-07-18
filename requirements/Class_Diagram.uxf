@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+ fontsize=12
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>423</y>
+      <w>369</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>Technician
+--
+-PK id: int   
+-name: String
+-surname: String
+-address: Address
+-telNo: String
+-CrewId: Crew 
+--
+&lt;&lt;constructor&gt;&gt;+Technician()
+&lt;&lt;constructor&gt;&gt;+Technician(String name, String surname, 
+    Address address, String telNo, Crew crew)
++getId()
++setId(int id)
++getName()
++setName(String name)
++getSurname()
++setSurname(String surname)
++getAddress()
++setAddress(Address address)
++getTelNo()
++setTelNo (String telNo)
++getCrew()
++setCrew(Crew crew)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1377</x>
+      <y>909</y>
+      <w>387</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Request
+--
+-PK id: int   
+-name: String
+-jobId: Job
+--
+&lt;&lt;constructor&gt;&gt;+Tool()
+&lt;&lt;constructor&gt;&gt;+Tool(String name,Job job)
++getName()
++setName(String name)
++getId()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>225</x>
+      <y>846</y>
+      <w>288</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Tool
+--
+-PK id: int   
+-name: String
+--
+&lt;&lt;constructor&gt;&gt;+Tool()
++getName()
++setName(String name)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>657</y>
+      <w>387</w>
+      <h>486</h>
+    </coordinates>
+    <panel_attributes>Job
+--
+-PK jobid: int
+-jobname: String 
+-expectedstart: GregorianCalendar 
+-expectedend: GregorianCalendar 
+-finalstart: GregorianCalendar 
+-finaldate: GregorianCalendar 
+-jobcost: double 
+-jobtype: int 
+-antiloghsmenh: int 
+-supervisor: Supervisor
+--
+&lt;&lt;constructor&gt;&gt;+Job()
+&lt;&lt;constructor&gt;&gt;+Job(Supervisor supervisor, String jobname)
+&lt;&lt;constructor&gt;&gt;+Job(String jobname)
++setJobCost(double amount)
++getJobCost()
++setExpectedStart(GregorianCalendar a)
++getExpectedStart()
++setExpectedEnd(GregorianCalendar a)
++getExpectedEnd()
++setFinalStart(GregorianCalendar a)
++getFinalStart()
++getFinalDate()
++setFinalDate(GregorianCalendar a)
++setSupervisor(Supervisor supervisor)
++getSupervisor()
++setAntilogismenh()
++getJobtype()
++setJobtype(int jobtype)
++getAntiloghsmenh()
++setAntiloghsmenh(int antiloghsmenh)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1359</x>
+      <y>270</y>
+      <w>324</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-PK id: int   
+-username: String
+-password: String
+-surname: String
+-name: String
+-email: String
+-type: String
+--
+&lt;&lt;constructor&gt;&gt;+User()
+&lt;&lt;constructor&gt;&gt;+User(String surname, String name, 
+    String email, String type)
++getId()
+setId(int id)
++getSurname()
++setSurname(String surname)
++getName()
++setName(String name)
++getEmail() 
++setEmail(String email) </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1242</x>
+      <y>684</y>
+      <w>279</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Supervisor
+--
+-jobs: Set&lt;Job&gt;
+--
+&lt;&lt;constructor&gt;&gt;+Supervisor()
+&lt;&lt;constructor&gt;&gt;+Supervisor(String surname, 
+    String name, String email)
++getJobs()
++friendJobs()
++getPendingJobs()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1620</x>
+      <y>693</y>
+      <w>279</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>SimpleUser
+--
+
+--
+&lt;&lt;constructor&gt;&gt;+SimpleUser()
+		
+&lt;&lt;constructor&gt;&gt;+SimpleUser(String surname, 
+String name, String email)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1629</x>
+      <y>567</y>
+      <w>126</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1305</x>
+      <y>567</y>
+      <w>108</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>180</y>
+      <w>387</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Crew
+--
+-PK id: int   
+-crewName: String
+-address: Address
+--
+&lt;&lt;constructor&gt;&gt;+Crew()
+&lt;&lt;constructor&gt;&gt;++Crew(String crewName, Address address)
++Address getAddress()
++setAddress(Address adsress)
++getId()
++setId(int id)
++getCrewName()
++setCrewName(String crewName)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1098</x>
+      <y>720</y>
+      <w>162</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=0..n
+επιβλέπει</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1098</x>
+      <y>999</y>
+      <w>288</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+σχετίζεται
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>369</y>
+      <w>252</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+εντάσσεται
+m1=0..1</panel_attributes>
+    <additional_attributes>260.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>369</y>
+      <w>99</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+αναλαμβάνει
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;320.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>891</y>
+      <w>234</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+χρησιποιείται
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;240.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>297</x>
+      <y>0</y>
+      <w>279</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>Address
+--
+-street: String
+-number: String
+-city: String
+-areaCode: String
+-country: String
+--
+&lt;&lt;constructor&gt;&gt;+Address()
++Address(Address address) {
++setStreet(String street) {
++getStreet() {
++setNumber(String number) {
++String getNumber() {
++getCity() {
++setAreaCode(String areaCode) {
++getAreaCode() {
++setCountry(String country) {
++getCountry() {
++equals (Object other): &lt;&lt;override&gt;&gt; 
++hashCode(): &lt;&lt;override&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>297</y>
+      <w>27</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>171</y>
+      <w>189</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

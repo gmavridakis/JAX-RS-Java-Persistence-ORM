@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>50</y>
+      <w>120</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Χρήστης
+--
+Username
+Password
+Επώνυμο
+Ονομα
+Email</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>180</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>110</y>
+      <w>250</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>310</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Υπάλληλος
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>40</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Επιβλέπων
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>300</y>
+      <w>180</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Συνεργείο
+--
+Όνομα Συνεργείου
+Τοποθεσία Συνεργείου</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>550</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Εργασία
+--
+Ονομα Εργασίας
+Υπολογιζόμενη Εναρξη
+Υπολογιζόμενη Λήξη
+Πραγματική Εναρξη
+Πραγματική Λήξη
+Κόστος Εργασίας
+Είδος Εργασίας
+Αντιλογισμένη</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>480</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Εργαλείο
+--
+Ονομα Εργαλείου</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>570</y>
+      <w>140</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Αίτηση
+--
+Όνομα Πελάτη
+Επώνυμο Πελάτη
+Διεύθυνση Πελάτη</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>100</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Τεχνικός
+--
+Όνομα Τεχνικού
+Επώνυμο Τεχνικού
+Διεύθυνση Τεχνικού
+Τηλέφωνο Τεχνικού</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>170</y>
+      <w>130</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=0..n
+επιβλέπει</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>430</y>
+      <w>120</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+αναλαμβάνει
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>610</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+σχετίζεται
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>560</y>
+      <w>240</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+χρησιμοποιείται
+m1=0..n</panel_attributes>
+    <additional_attributes>220.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>230</y>
+      <w>230</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+εντάσσεται
+m1=0..1</panel_attributes>
+    <additional_attributes>210.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
