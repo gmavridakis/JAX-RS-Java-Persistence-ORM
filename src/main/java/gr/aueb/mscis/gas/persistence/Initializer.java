@@ -27,7 +27,7 @@ public class Initializer  {
         queryDeleteTechnicians = em.createNativeQuery("delete from Technician");
         queryDeleteTechnicians.executeUpdate();
         
-        
+
         queryDeleteRequest = em.createNativeQuery("delete from Request");
         queryDeleteRequest.executeUpdate();
         
@@ -98,7 +98,7 @@ public class Initializer  {
         job1.setSupervisor(supervisor);
         Technician superMario = new Technician("Super", "Mario", technicianAddress, "2108888888", null);
         
-        Tool atool = new Tool("katsavidi");
+        Tool atool = new Tool("katsavidi leme!");
         
         EntityManager em = JPAUtil.getCurrentEntityManager();
         EntityTransaction tx = em.getTransaction();
